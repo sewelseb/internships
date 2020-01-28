@@ -1,3 +1,7 @@
 index:
     path: /
     controller: App\Controller\MainController::index
+
+InternshipApply:
+    path: /internship-apply
+    controller: App\Controller\InternshipApplyController::index

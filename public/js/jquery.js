@@ -1,6 +1,6 @@
 $("#search").click(function() {
     $.post(
-        "index.php?page=SaveUserInput",
+        "/internship-apply",
         {
             'location': $('#location').val(),
             'email': $('#email').val(),
