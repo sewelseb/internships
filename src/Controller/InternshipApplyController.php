@@ -13,10 +13,7 @@ class InternshipApplyController extends AbstractController
     {
         $internshipApplication = $this->createInternshipApplication($request);
 
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->persist($internshipApplication);
-        $entityManager->flush();
-
+        $this->persistInternshipApplication($internshipApplication);
 
         return $this->json($request->request);
     }
@@ -32,5 +29,15 @@ class InternshipApplyController extends AbstractController
         $internshipApplication->setLocation($request->request->get('location'));
         $internshipApplication->setStudies($request->request->get('studies'));
         return $internshipApplication;
+    }
+
+    /**
+     * @param InternshipApplication $internshipApplication
+     */
+    public function persistInternshipApplication(InternshipApplication $internshipApplication): void
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($internshipApplication);
+        $entityManager->flush();
     }
 }

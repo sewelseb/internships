@@ -1,0 +1,13 @@
+{{ form_start(registrationForm) }}
+    <div class="form-group">
+        {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+    </div>
+    <div  class="form-group">
+        {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control', 'placeholder': 'Password'}}) }}
+    </div>
+    <div  class="form-group">
+        {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': ''}}) }} Agree terms
+    </div>
+    <button class="btn btn-primary text-white float-right">Register</button>
+{{ form_end(registrationForm) }}
+

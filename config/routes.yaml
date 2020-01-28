@@ -5,3 +5,7 @@ index:
 InternshipApply:
     path: /internship-apply
     controller: App\Controller\InternshipApplyController::index
+
+Profile:
+    path: /profile
+    controller: App\Controller\ProfileController::index
