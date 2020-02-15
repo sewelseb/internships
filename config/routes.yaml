@@ -9,3 +9,7 @@ InternshipApply:
 Profile:
     path: /app/profile
     controller: App\Controller\ProfileController::index
+
+Admin:
+    path: /admin
+    controller: App\Controller\AdminController::index
