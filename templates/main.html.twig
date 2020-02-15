@@ -634,9 +634,15 @@
                 </button>
             </div>
             <div class="modal-body">
-                {{ render(controller(
-                    'App\\Controller\\RegistrationController::register', {request: app.request}
-                )) }}
+                {% if app.user %}
+                    <script>
+                        window.location.replace("{{ path('Profile') }}");
+                    </script>
+                {% else %}
+                    {{ render(controller(
+                        'App\\Controller\\RegistrationController::register', {request: app.request}
+                    )) }}
+                {% endif %}
             </div>
         </div>
     </div>
