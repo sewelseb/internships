@@ -13,3 +13,7 @@ Profile:
 Admin:
     path: /admin
     controller: App\Controller\AdminController::index
+
+Fixtures:
+    path: /fixture
+    controller: App\Controller\FixtureController::index
