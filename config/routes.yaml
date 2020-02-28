@@ -17,3 +17,7 @@ Admin:
 Fixtures:
     path: /fixture
     controller: App\Controller\FixtureController::index
+
+app_logout:
+    path: /logout
+    methods: GET
